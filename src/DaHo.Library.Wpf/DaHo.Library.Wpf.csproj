@@ -4,7 +4,6 @@
     <TargetFramework>net4.7.2</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>David Hodel</Authors>
-    <Company />
     <Copyright>Copyright ©2019 David Hodel</Copyright>
     <RepositoryUrl>https://github.com/Davee02/DaHo.Library</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Davee02/DaHo.Library</PackageProjectUrl>
