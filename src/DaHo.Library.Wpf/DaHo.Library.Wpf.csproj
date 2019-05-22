@@ -5,11 +5,16 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>David Hodel</Authors>
     <Company />
-    <Copyright>Copyright ©2016 David Hodel</Copyright>
+    <Copyright>Copyright ©2019 David Hodel</Copyright>
     <RepositoryUrl>https://github.com/Davee02/DaHo.Library</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Davee02/DaHo.Library</PackageProjectUrl>
     <Description>Utility classes and methods for wpf applications</Description>
+    <Version>1.1.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="PresentationCore" />

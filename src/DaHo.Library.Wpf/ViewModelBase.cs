@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace DaHo.Library.Wpf
 {
-    public abstract class ViewModelBase : INotifyPropertyChanged
+    public abstract class ViewModelBase : DataErrorInfoBase, INotifyPropertyChanged
     {
         /// <summary>
         /// Multicast event for property change notifications.
