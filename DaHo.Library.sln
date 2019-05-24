@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28902.138
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaHo.Library.Wpf", "src\DaHo.Library.Wpf\DaHo.Library.Wpf.csproj", "{F4656B44-C759-4726-962B-32370C9F7981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaHo.Library.Utilities", "DaHo.Library.Utilities\DaHo.Library.Utilities.csproj", "{377CD793-050C-4225-835F-3356A928D144}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaHo.Library.Utilities", "src\DaHo.Library.Utilities\DaHo.Library.Utilities.csproj", "{377CD793-050C-4225-835F-3356A928D144}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
