@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -7,6 +8,24 @@ namespace DaHo.Library.Wpf
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
+        /// <summary>
+        /// This action closes the view
+        /// The current state cannot be recovered by calling the show-action
+        /// </summary>
+        public Action CloseAction { get; set; }
+
+        /// <summary>
+        /// This action hides the view
+        /// The current state can be recovered by calling the show-action
+        /// </summary>
+        public Action HideAction { get; set; }
+
+        /// <summary>
+        /// This action shows the view
+        /// Recovers the current state after calling the hide-action
+        /// </summary>
+        public Action ShowAction { get; set; }
+
         /// <summary>
         /// Multicast event for property change notifications.
         /// </summary>
