@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>David Hodel</Authors>
+    <Copyright>Copyright ©2019 David Hodel</Copyright>
+    <RepositoryUrl>https://github.com/Davee02/DaHo.Library</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Davee02/DaHo.Library</PackageProjectUrl>
+    <Description>Utility classes and methods for ASP.NET Core applications</Description>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+  </ItemGroup>
+
+</Project>
