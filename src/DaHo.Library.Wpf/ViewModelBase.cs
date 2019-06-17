@@ -8,6 +8,8 @@ namespace DaHo.Library.Wpf
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
+        public IDialogService DialogService { get; set; }
+
         /// <summary>
         /// This action closes the view
         /// The current state cannot be recovered by calling the show-action
