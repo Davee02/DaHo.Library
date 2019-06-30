@@ -5,44 +5,46 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DaHo.Library.AspNetCore.Data.Repositories.EntityFramework
 {
-    public abstract class GenericEntityInterface<TEntity> : IGenericInterface<TEntity> where TEntity : class
+    public abstract class GenericEntityInterface<TEntity, TContext> : IGenericInterface<TEntity> 
+        where TEntity : class 
+        where TContext : DbContext
     {
-        private readonly DbContext _context;
+        protected readonly TContext Context;
 
-        protected GenericEntityInterface(DbContext context)
+        protected GenericEntityInterface(TContext context)
         {
-            _context = context;
+            Context = context;
         }
 
         public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return await _context.Set<TEntity>().ToListAsync();
+            return await Context.Set<TEntity>().ToListAsync();
         }
 
         public virtual async Task<TEntity> GetByIdAsync(int id)
         {
-            return await _context.FindAsync<TEntity>(id);
+            return await Context.FindAsync<TEntity>(id);
         }
 
         public virtual async Task CreateAsync(TEntity entity)
         {
-            await _context.Set<TEntity>()
+            await Context.Set<TEntity>()
                 .AddAsync(entity);
-            await _context.SaveChangesAsync();
+            await Context.SaveChangesAsync();
         }
 
         public virtual async Task UpdateAsync(TEntity entity)
         {
-            _context.Set<TEntity>()
+            Context.Set<TEntity>()
                 .Update(entity);
-            await _context.SaveChangesAsync();
+            await Context.SaveChangesAsync();
         }
 
         public virtual async Task DeleteAsync(TEntity entity)
         {
-            _context.Set<TEntity>()
+            Context.Set<TEntity>()
                 .Remove(entity);
-            await _context.SaveChangesAsync();
+            await Context.SaveChangesAsync();
         }
     }
 }

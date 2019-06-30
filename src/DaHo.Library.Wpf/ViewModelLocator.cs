@@ -42,6 +42,7 @@ namespace DaHo.Library.Wpf
                 viewModelBase.ShowAction = window.Show;
                 viewModelBase.CloseAction = window.Close;
                 viewModelBase.HideAction = window.Hide;
+                viewModelBase.DialogService = new MessageboxDialogService();
             }
 
             ((FrameworkElement)d).DataContext = viewModel;
