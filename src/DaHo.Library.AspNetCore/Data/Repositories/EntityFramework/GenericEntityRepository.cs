@@ -18,12 +18,20 @@ namespace DaHo.Library.AspNetCore.Data.Repositories.EntityFramework
 
         public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return await Context.Set<TEntity>().ToListAsync();
+            return await Context
+                .Set<TEntity>()
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public virtual async Task<TEntity> GetByIdAsync(int id)
         {
-            return await Context.FindAsync<TEntity>(id);
+            var foundEntity = await Context.FindAsync<TEntity>(id);
+
+            if (foundEntity != null)
+                Context.Entry(foundEntity).State = EntityState.Detached;
+
+            return foundEntity;
         }
 
         public virtual async Task CreateAsync(TEntity entity)
