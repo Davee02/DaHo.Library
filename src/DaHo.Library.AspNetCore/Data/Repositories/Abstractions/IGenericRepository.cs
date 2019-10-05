@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace DaHo.Library.AspNetCore.Data.Repositories.Abstractions
 {
-    public interface IGenericInterface<T>
+    public interface IGenericRepository<T>
     {
         Task<IEnumerable<T>> GetAllAsync();
 

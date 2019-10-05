@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DaHo.Library.AspNetCore.Data.Repositories.EntityFramework
 {
-    public abstract class GenericEntityInterface<TEntity, TContext> : IGenericInterface<TEntity> 
+    public abstract class GenericEntityRepository<TEntity, TContext> : IGenericRepository<TEntity> 
         where TEntity : class 
         where TContext : DbContext
     {
         protected readonly TContext Context;
 
-        protected GenericEntityInterface(TContext context)
+        protected GenericEntityRepository(TContext context)
         {
             Context = context;
         }
