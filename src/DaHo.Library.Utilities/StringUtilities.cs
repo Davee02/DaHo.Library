@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security;
 
@@ -24,6 +25,13 @@ namespace DaHo.Library.Utilities
             {
                 Marshal.FreeBSTR(bstr);
             }
+        }
+
+        public static string RemoveWhitespaces(this string input)
+        {
+            return new string(input
+                .Where(c => !char.IsWhiteSpace(c))
+                .ToArray());
         }
     }
 }

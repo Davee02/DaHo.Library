@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System.Linq;
 
 namespace DaHo.Library.Utilities.Test
 {
@@ -56,7 +54,6 @@ namespace DaHo.Library.Utilities.Test
             Assert.AreEqual(TestEnum.Value3, value3);
         }
 
-
         [Test]
         public void GetValueFromDescription_Returns_Default_When_Description_Not_Found()
         {
@@ -64,6 +61,15 @@ namespace DaHo.Library.Utilities.Test
             var defaultValue = default(TestEnum);
 
             Assert.AreEqual(defaultValue, value);
+        }
+
+        [Test]
+        public void GetEnumValues_Returns_Correct_Amount()
+        {
+            var enumValues = EnumUtilities.GetEnumValues<TestEnum>();
+            const int enumValuesCount = 3;
+
+            Assert.AreEqual(enumValuesCount, enumValues.Count());
         }
 
         private enum TestEnum

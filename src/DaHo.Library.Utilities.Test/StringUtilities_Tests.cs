@@ -58,5 +58,17 @@ namespace DaHo.Library.Utilities.Test
 
             Assert.AreEqual(stringValue, secureString.ConvertToString());
         }
+
+        [Test]
+        [TestCase("This is a test string", "Thisisateststring")]
+        [TestCase("a\tb\tc", "abc")]
+        [TestCase("   \t\n", "")]
+        [TestCase("lalala", "lalala")]
+        public void RemoveWhitespaces_Removes_All_Whitespaces(string stringValue, string expected)
+        {
+            string removed = stringValue.RemoveWhitespaces();
+
+            Assert.AreEqual(expected, removed);
+        }
     }
 }

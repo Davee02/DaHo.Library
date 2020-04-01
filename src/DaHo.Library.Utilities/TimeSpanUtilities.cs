@@ -21,6 +21,6 @@ namespace DaHo.Library.Utilities
             return new TimeSpan(ticks);
         }
 
-        public static bool IsFullHour(this TimeSpan a) => a.Minutes == 0 && a.Seconds == 0 && a.Milliseconds == 0;
+        public static bool IsFullHour(this TimeSpan a) => a.Minutes == 0 && a.Seconds == 0;
     }
 }
