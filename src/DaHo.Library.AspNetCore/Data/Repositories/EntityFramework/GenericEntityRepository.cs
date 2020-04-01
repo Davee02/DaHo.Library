@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DaHo.Library.AspNetCore.Data.Repositories.EntityFramework
 {
-    public abstract class GenericEntityRepository<TEntity, TContext> : IGenericRepository<TEntity> 
+    public abstract class GenericEntityRepository<TEntity, TContext> : IGenericRepository<TEntity>
         where TEntity : class 
         where TContext : DbContext
     {

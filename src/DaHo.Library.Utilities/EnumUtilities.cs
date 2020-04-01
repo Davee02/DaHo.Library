@@ -17,8 +17,8 @@ namespace DaHo.Library.Utilities
             var memInfo = type.GetMember(enumVal.ToString());
             var attributes = memInfo[0].GetCustomAttributes(typeof(T), false);
 
-            return attributes.Length > 0 ? 
-                (T)attributes[0] 
+            return attributes.Length > 0 ?
+                (T)attributes[0]
                 : null;
         }
 

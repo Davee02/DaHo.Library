@@ -34,7 +34,7 @@ namespace DaHo.Library.Utilities
             var enumerable = list.ToList();
 
             for (var i = 0; i < enumerable.Count; i += n)
-                yield return enumerable.ElementAt(i);
+                yield return enumerable[i];
         }
 
         public static IEnumerable<T> GetNth<T>(this IEnumerable<T> list, int n, T filler)
@@ -47,7 +47,7 @@ namespace DaHo.Library.Utilities
             for (var i = 0; i < enumerable.Count; i++)
             {
                 if (i % n == 0)
-                    yield return enumerable.ElementAt(i);
+                    yield return enumerable[i];
                 else
                     yield return filler;
             }

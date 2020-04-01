@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using DaHo.Library.Utilities;
 using NUnit.Framework;
 
-namespace Tests
+namespace DaHo.Library.Utilities.Test
 {
     [TestFixture]
-    public class Tests
+    class EnumerableUtilities_Tests
     {
         [Test]
         public void ToObservableCollection_Returns_Correct_Collection()
